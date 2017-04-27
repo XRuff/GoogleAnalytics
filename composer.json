@@ -25,7 +25,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"XRuff\\App\\UI\\Components\\": "src/Components"
+			"XRuff\\App\\UI\\Components\\": "src"
 		}
 	},
 	"minimum-stability": "dev",
