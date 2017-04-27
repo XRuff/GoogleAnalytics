@@ -1,7 +1,7 @@
 {
 	"name": "xruff/googleanalytics",
 	"type": "library",
-	"description": "Google Analytics component for Nette Framework application",
+	"description": "Nette extension - Google Analytics code",
 	"keywords": ["nette", "analytics", "google", "ga", "component"],
 	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
 	"authors": [
@@ -25,9 +25,10 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"XRuff\\App\\UI\\Components\\": "src"
+			"XRuff\\App\\UI\\Components\\": "src/Components"
 		}
 	},
+	"minimum-stability": "dev",
 	"scripts": {
 		"lint": "\"vendor/bin/phpcs\" --standard=ruleset.xml --extensions=php --encoding=utf-8 --ignore=vendor .",
 		"fix": "\"vendor/bin/phpcbf\" --standard=ruleset.xml --extensions=php --encoding=utf-8 --no-patch --ignore=vendor ."

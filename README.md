@@ -51,6 +51,8 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 }
 ```
 
+@layout.latte:
+
 ```smarty
     ...
 </head>
