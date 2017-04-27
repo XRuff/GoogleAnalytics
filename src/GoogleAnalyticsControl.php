@@ -41,7 +41,7 @@ class GoogleAnalyticsControl extends Control
 		$this->template->user = $this->user;
 		$this->template->showLoggedUserId = $this->showLoggedUserId && $this->user->isLoggedIn();
 
-		$this->template->setFile(dirname(__FILE__) . '/../templates/default.latte');
+		$this->template->setFile(dirname(__FILE__) . '/templates/default.latte');
 		$this->template->render();
 	}
 }
