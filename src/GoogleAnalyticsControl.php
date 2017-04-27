@@ -45,11 +45,3 @@ class GoogleAnalyticsControl extends Control
 		$this->template->render();
 	}
 }
-
-interface IGoogleAnalyticsControlFactory
-{
-	/**
-	 * @return XRuff\App\UI\Components\GoogleAnalyticsControl
-	 */
-	public function create();
-}
