@@ -1,0 +1,35 @@
+{
+	"name": "xruff/googleanalytics",
+	"type": "library",
+	"description": "Google Analytics component for Nette Framework application",
+	"keywords": ["nette", "analytics", "google", "ga", "component"],
+	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+	"authors": [
+		{
+			"name": "Pavel Lauko"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/XRuff/GoogleAnalytics/issues"
+	},
+	"require": {
+		"nette/security": "~2.3",
+		"nette/application": "~2.3"
+	},
+	"require-dev": {
+		"nette/security": "~2.3",
+		"nette/application": "~2.3",
+		"nette/tester": "~1.1.0",
+		"tracy/tracy": "2.3.*",
+		"vanio/coding-standards": "^0.1@dev"
+	},
+	"autoload": {
+		"psr-4": {
+			"XRuff\\App\\UI\\Components\\": "src"
+		}
+	},
+	"scripts": {
+		"lint": "\"vendor/bin/phpcs\" --standard=ruleset.xml --extensions=php --encoding=utf-8 --ignore=vendor .",
+		"fix": "\"vendor/bin/phpcbf\" --standard=ruleset.xml --extensions=php --encoding=utf-8 --no-patch --ignore=vendor ."
+	}
+}
