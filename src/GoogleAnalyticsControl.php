@@ -17,10 +17,10 @@ class GoogleAnalyticsControl extends Control
 	private $user;
 
 	/** @var string */
-	public const ON = true;
+	const ON = true;
 
 	/** @var string */
-	public const OFF = false;
+	const OFF = false;
 
 	/**
 	 * @param string $code
