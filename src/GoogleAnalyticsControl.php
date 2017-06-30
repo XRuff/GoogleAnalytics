@@ -35,11 +35,18 @@ class GoogleAnalyticsControl extends Control
 		$this->showLoggedUserId = $showLoggedUserId === true;
 	}
 
-	public function render()
+	public function render($code = null, $showLoggedUserId = null)
 	{
-		$this->template->code = $this->code;
+		$this->template->code = $code !== null ? $code : $this->code;
 		$this->template->user = $this->user;
-		$this->template->showLoggedUserId = $this->showLoggedUserId && $this->user->isLoggedIn();
+
+		if ($showLoggedUserId !== null) {
+			$showUserId = $showLoggedUserId;
+		} else {
+			$showUserId = $this->showLoggedUserId;
+		}
+
+		$this->template->showLoggedUserId = $showUserId && $this->user->isLoggedIn();
 
 		$this->template->setFile(dirname(__FILE__) . '/templates/default.latte');
 		$this->template->render();
