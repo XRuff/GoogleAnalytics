@@ -31,7 +31,7 @@ extensions:
 
 googleAnalytics:
     code: UA-123456789-1
-    user: on # on/off - display user ID is user is logged in
+    user: on # on/off - display user ID if user is logged in
 ```
 
 Base presenter:
