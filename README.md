@@ -30,8 +30,8 @@ extensions:
     googleAnalytics: XRuff\App\UI\Components\DI\GoogleAnalyticsExtension
 
 googleAnalytics:
-    code: UA-4564988-3
-    user: on # on/off - dispalay user ID
+    code: UA-123456789-1
+    user: on # on/off - display user ID is user is logged in
 ```
 
 Base presenter:
@@ -58,6 +58,16 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
 </head>
 <body>
     {control googleAnalytics}
+    ...
+```
+
+You can invoke parameters into control in latte template. 1st parameter is GA code. 2nd parameter should be boolean and manage displaying GA directive for user's session - `ga('set', 'userId', {$user->id});`. Both parameters are optioanl.
+
+```smarty
+    ...
+</head>
+<body>
+    {control googleAnalytics 'UA-123456789-2', false}
     ...
 ```
 
