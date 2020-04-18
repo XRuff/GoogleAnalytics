@@ -29,7 +29,6 @@ class GoogleAnalyticsControl extends Control
 	 */
 	public function __construct($code, $showLoggedUserId, User $user)
 	{
-		parent::__construct();
 		$this->code = $code;
 		$this->user = $user;
 		$this->showLoggedUserId = $showLoggedUserId === true;
