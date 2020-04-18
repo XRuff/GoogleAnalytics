@@ -7,8 +7,8 @@ use XRuff\App\UI\Components;
 
 class GoogleAnalyticsExtension extends Nette\DI\CompilerExtension
 {
-	/** @var array $DEFAULTS */
-	private static $DEFAULTS = [
+	/** @var array $defaults */
+	private $defaults = [
 		'code' => null,
 		'user' => Components\GoogleAnalyticsControl::ON,
 	];
@@ -16,7 +16,9 @@ class GoogleAnalyticsExtension extends Nette\DI\CompilerExtension
 	public function loadConfiguration()
 	{
 		$builder = $this->getContainerBuilder();
-		$config = $this->getConfig(self::$DEFAULTS);
+		$this->validateConfig($this->defaults);
+
+		$config = $this->config;
 
 		$builder->addDefinition($this->prefix('googleAnalyticsControlFactory'))
 			->setClass(Components\GoogleAnalyticsControl::class)

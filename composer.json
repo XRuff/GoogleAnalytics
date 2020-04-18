@@ -13,19 +13,17 @@
 		"issues": "https://github.com/XRuff/GoogleAnalytics/issues"
 	},
 	"require": {
-		"nette/security": "~2.3",
-		"nette/application": "~2.3"
+		"nette/security": "^3.0",
+		"nette/application": "^3.0"
 	},
 	"require-dev": {
-		"nette/security": "~2.3",
-		"nette/application": "~2.3",
-		"nette/tester": "~1.1.0",
-		"tracy/tracy": "2.3.*",
+		"nette/tester": "^2.0",
+		"tracy/tracy": "^2.6",
 		"vanio/coding-standards": "^0.1@dev"
 	},
 	"autoload": {
 		"psr-4": {
-			"XRuff\\Components\\": "src"
+			"XRuff\\App\\UI\\Components\\": "src"
 		}
 	},
 	"minimum-stability": "dev",
