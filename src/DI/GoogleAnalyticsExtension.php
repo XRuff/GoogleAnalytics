@@ -20,10 +20,11 @@ class GoogleAnalyticsExtension extends Nette\DI\CompilerExtension
 
 		$config = $this->config;
 
-		$builder->addDefinition($this->prefix('googleAnalyticsControlFactory'))
-			->setClass(Components\GoogleAnalyticsControl::class)
+		$builder->addFactoryDefinition($this->prefix('googleAnalyticsControlFactory'))
 			->setImplement(Components\IGoogleAnalyticsControlFactory::class)
-			->setArguments([$config['code'], $config['user']]);
+			->getResultDefinition()
+				->setFactory(Components\GoogleAnalyticsControl::class)
+				->setArguments([$config['code'], $config['user']]);
 	}
 
 	/**
