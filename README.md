@@ -4,7 +4,7 @@ Google Analytics component for Nette Framework application
 Requirements
 ------------
 
-Package requires PHP 5.6 or higher
+Package requires PHP 7.1 or higher
 
 - [nette/security](https://github.com/nette/security)
 - [nette/application](https://github.com/nette/application)
@@ -23,7 +23,7 @@ Documentation
 
 Configuration in config.neon. Both parameters are optional.
 
-If parameter `code` is missing, GA code will not be rendered in template. If parameter `user` is missing, default settings will be used - value `on`. If paramter `user` is `on` and user is logged in, google analytics code will contain directive `ga('set', 'userId', {$user->id});`
+If parameter `code` is missing, GA code will not be rendered in template. If parameter `user` is missing, default settings will be used - value `on`. If parameter `user` is `on` and user is logged in, google analytics code will contain directive `ga('set', 'userId', {$user->id});`
 
 ```yml
 extensions:
@@ -31,7 +31,7 @@ extensions:
 
 googleAnalytics:
     code: UA-123456789-1
-    user: on # on/off - display user ID if user is logged in
+    user: yes # yes/no - display user ID if user is logged in
 ```
 
 Base presenter:
@@ -61,7 +61,7 @@ abstract class BasePresenter extends Nette\Application\UI\Presenter
     ...
 ```
 
-You can invoke parameters into control in latte template. 1st parameter is GA code. 2nd parameter should be boolean and manage displaying GA directive for user's session - `ga('set', 'userId', {$user->id});`. Both parameters are optioanl.
+You can invoke parameters into control in latte template. 1st parameter is GA code. 2nd parameter should be boolean and manage displaying GA directive for user's session - `ga('set', 'userId', {$user->id});`. Both parameters are optional.
 
 ```smarty
     ...
