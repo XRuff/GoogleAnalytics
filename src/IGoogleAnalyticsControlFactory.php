@@ -5,7 +5,7 @@ namespace XRuff\App\UI\Components;
 interface IGoogleAnalyticsControlFactory
 {
 	/**
-	 * @return XRuff\App\UI\Components\GoogleAnalyticsControl
+	 * @return GoogleAnalyticsControl
 	 */
 	public function create();
 }
